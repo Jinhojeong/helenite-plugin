@@ -1,0 +1,39 @@
+# Helenite Software License
+
+Version 1.0 · 26 October 2026 · Copyright © 2026 Egress. All rights reserved.
+
+This license applies when Egress distributes the Helenite Obsidian plugin or Helenite desktop application with a copy of it. It grants software-use rights; downloading or installing Helenite does not create a paid subscription. [한국어](https://helenite.net/license?lang=ko)
+
+## 1. Permission to use
+
+Egress, a business registered in the Republic of Korea, grants you a non-exclusive license to download, install, run and keep backup copies of the authorized Helenite release on devices you own or are authorized to use, for personal or internal business use. Contact: **admin@egress.llc**.
+
+You may inspect the distributed code for troubleshooting, interoperability and security evaluation. You may make private changes for those purposes without representing them as an official Helenite release. This permission does not grant access to Egress's private development repository or a right to operate, resell or sublicense Egress's hosted services. Helenite uses a proprietary license; availability of readable JavaScript is not an open-source license.
+
+## 2. Synchronization and your files
+
+Download and installation are free. Helenite synchronization requires a valid subscription or an expressly offered trial. The service terms and the plan presented before purchase govern service access, prices and limits. This license does not promise unlimited storage, traffic, devices, support or service availability.
+
+You retain ownership of your notes and attachments. Expiry, cancellation or closure of your Helenite account does not remove your right to open, copy or export files already stored in your local vaults using Obsidian or other suitable software. It does not authorize Egress to erase those vaults. A subscription is not a company-hosted vault backup. Keep independent backups and protect your devices and keys.
+
+## 3. Distribution and reserved rights
+
+Obsidian's community directory and installation/update mechanisms, and the hosting providers Egress selects for its official release channels, may reproduce and deliver unchanged authorized Helenite release files with their applicable notices. You may link to the official download.
+
+Except for this permission, another applicable license, Egress's written permission or rights that cannot lawfully be restricted, you may not sell or sublicense Helenite, redistribute its source or modified releases, remove rights notices, or use Egress/Helenite branding to imply endorsement. Private permitted modifications do not permit bypassing subscription authorization or accessing another person's account or vault. These restrictions do not apply to independently developed interoperable software or lawful security research.
+
+## 4. Third-party software
+
+Separate third-party notices and licenses accompanying a release continue to govern those components and prevail for them. This license does not cover Obsidian, an operating system or a separately acquired third-party service.
+
+Helenite is independently developed by Egress. It is not an official Obsidian product and is not affiliated with or endorsed by Obsidian. No rights to Obsidian's trademarks or software are granted here.
+
+## 5. Changes, breaches and legal rights
+
+The copy distributed with your release governs your use of that release. Egress will identify the version of terms accompanying a later release. A new license will not retroactively transfer ownership of your notes or remove non-waivable rights.
+
+If you materially breach this license, Egress may require you to stop the unauthorized use. Where the breach can be corrected, Egress will provide notice and a reasonable opportunity to correct it before terminating the affected license, unless immediate action is needed to address unlawful activity, fraud or a security threat. Termination of software-use permission does not give Egress ownership of your files or restrict their independent access or export.
+
+Software and networks can fail; Helenite does not guarantee error-free synchronization or permanent background execution. Applicable mandatory warranties, remedies, consumer protections and liability remain in force. No provision excludes liability that cannot lawfully be excluded. Contact **admin@egress.llc** about problems or disputes. The laws and courts that have mandatory jurisdiction remain available to you. If a provision is unenforceable, the remaining lawful provisions continue to apply.
+
+The English and Korean versions describe the same permissions. Neither translation is used to reduce rights provided by mandatory law.

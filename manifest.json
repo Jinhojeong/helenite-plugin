@@ -1,0 +1,9 @@
+{
+  "id": "helenite",
+  "name": "Helenite",
+  "version": "0.1.3",
+  "minAppVersion": "1.7.2",
+  "description": "Independent encrypted vault sync and device pairing. Early test release requiring your own host computer or server.",
+  "author": "Egress",
+  "isDesktopOnly": false
+}
