@@ -58,4 +58,4 @@ The LICENSE in this repository governs use of the distributed plugin. Source is 
 
 The bundle currently contains first-party Helenite runtime code only; Obsidian is supplied by the host application. The build review rejects added bundled third-party dependencies until their notices and license obligations are explicitly reviewed.
 
-Product information: [helenite.net](https://helenite.net). Privacy and support contact: **admin@egress.llc**. This public artifact repository may be used for non-sensitive installation issues after it is created. Do not post credentials or personal vault contents.
+Product information: [helenite.net](https://helenite.net). Privacy and support contact: **admin@egress.llc**. Read [Support](SUPPORT.md) for installation or sync reports and [Security reporting](SECURITY.md) for private vulnerability reports. Do not post credentials or personal vault contents.
