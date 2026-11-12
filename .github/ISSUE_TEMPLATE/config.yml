@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Installation and recovery guide
+    url: https://helenite.net/guide
+    about: Read the installation, connection and recovery steps before reporting.

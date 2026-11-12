@@ -1,0 +1,52 @@
+name: Bug report
+description: Report an installation or sync problem using disposable example data.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        English or Korean is welcome. 한국어로 작성하셔도 됩니다.
+        This is a public report. Never include QRs, connection links or codes,
+        passwords, keys, tokens, plugin data.json, account or billing identifiers,
+        private notes, raw logs, or device/network addresses.
+        For security, privacy, billing or sensitive support, email admin@egress.llc
+        with a short description instead. Do not send secrets or a vault by email.
+        Review builds and this form do not mean public service is available.
+        Read SUPPORT.md and the user guide before reporting.
+  - type: checkboxes
+    id: public-report
+    attributes:
+      label: Public report check
+      options:
+        - label: I reviewed the text and included no private data or credentials.
+          required: true
+  - type: textarea
+    id: versions
+    attributes:
+      label: App and device versions
+      description: Desktop app and OS; Obsidian and Helenite plugin versions on each affected device. Do not include serial numbers or device names.
+      placeholder: "Host: OS/version, Helenite desktop/version, Obsidian/version, plugin/version. Phone: OS/version, Obsidian/version, plugin/version."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Use a disposable note and dummy text. Do not attach a vault, screenshots with private data, or raw logs.
+      placeholder: "1. Open the test note on...\n2. Change...\n3. Observe..."
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result
+      description: Include a redacted error message and approximate time with time zone. No account email, billing identifiers or credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: connection
+    attributes:
+      label: Connection and app state
+      description: Was the host awake and online with Helenite and Obsidian running? Was Obsidian visible on the receiving device? State Wi-Fi or cellular, without SSID, IP address or connection URL. Note any sleep or network switch.
+    validations:
+      required: true
