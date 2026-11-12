@@ -5,6 +5,7 @@ Helenite is not an official Obsidian product and is not affiliated with Obsidian
 
 **Release status: development alpha; community listing and paid service are not yet available.**
 This repository contains built plugin release assets. Source development takes place in a separate private repository.
+Obsidian supports a [separate private source repository](https://docs.obsidian.md/community-directory/manage-entry) for build verification through its Community directory GitHub App.
 Closed-source community submissions are reviewed by Obsidian case by case; this document does not indicate approval.
 
 ## Install and connect

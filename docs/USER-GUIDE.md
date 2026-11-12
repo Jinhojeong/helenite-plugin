@@ -2,7 +2,7 @@
 
 [한국어](USER-GUIDE.ko.md)
 
-**Alpha user guide · updated 26 October 2026.** The latest prepared desktop installers are 0.1.9 and bundle plugin 0.1.3. Desktop and plugin version numbers are separate. Helenite is an independent Egress product, not an official Obsidian product. General desktop downloads, payments and the Community plugins listing are not open yet. A separately published plugin alpha is for invited testing and review, not an activated public service. The steps below distinguish the planned public route from the current invited test route. The complete, unaided first-use journey on the final physical devices is still awaiting acceptance.
+**Alpha user guide · updated 12 November 2026.** Desktop 0.1.10 and plugin 0.1.4 are local release candidates being prepared; they are not a public stable release. Desktop and plugin version numbers are separate. Helenite is an independent Egress product, not an official Obsidian product. General desktop downloads and payments are not open yet; the Community plugins submission still needs current approval confirmation. A separately published plugin alpha is for invited testing and review, not an activated public service. The steps below distinguish the planned public route from the current invited test route. The complete, unaided first-use journey on the final physical devices is still awaiting acceptance.
 
 ## What you need
 
@@ -15,7 +15,7 @@ Your phone still uses Obsidian. It receives a local copy of the notes; it does n
 ## 1. Set up the host computer
 
 1. For now, use only the installer supplied for your invited test. When public downloads open, use the matching download at [helenite.net](https://helenite.net/).
-2. Install and open Helenite. Current candidates are **macOS Apple Silicon (ARM64)**, **Windows x64**, and an **Ubuntu 22.04 x64 DEB**. They do not establish support for Intel Macs, Windows ARM or every Linux distribution. Mac is signed and notarized; Linux has a signed package. Windows signing is still pending, so its current installer is a test build, not the final public release.
+2. Install and open Helenite. Current candidates target **macOS Apple Silicon (ARM64)**, **Windows x64**, and an **Ubuntu 22.04 x64 DEB**. They do not establish support for Intel Macs, Windows ARM or every Linux distribution. Use the signing and verification result supplied with that exact installer: earlier Mac notarization or Linux package signatures do not certify a newly built file. Windows signing is still pending, so its current installer is a test build, not the final public release.
 3. Open your test vault in Obsidian. In Helenite choose **Find my vault**, select that same folder, then **Install Helenite**. This adds the plugin to that vault only; merely installing the desktop app does not add it to every vault.
 4. In Obsidian open **Settings → Community plugins** and enable **Helenite — By Egress**. Allow community plugins only after checking the supplied plugin. If it does not appear, refresh the installed list or reopen Obsidian; make sure you opened the selected vault.
 5. Once Helenite detects the running plugin, choose **Next → Start on this computer → Start with this computer**. Confirm that the server shows **Running**.
@@ -86,15 +86,49 @@ If a write was interrupted, first restore and inspect a separate copy. Use **Kee
 
 Sync and recovery copies are not an independent backup. Keep a separate, protected backup of your vault, including the private Helenite settings needed for recovery. Do not manually delete hidden Helenite state or share `.obsidian/plugins/helenite/data.json`; it contains connection keys. A lost encryption key cannot be recovered from an email login.
 
+## Usage details and automatic connection recovery
+
+**This describes the local candidate as of November 12, 2026. Production policy activation and public launch are separate.**
+
+When a current subscription is verified on the first PC connection request, Helenite applies the management policy to that account automatically. Signing up or signing in does not grant paid access. Keep your existing account, PC, phone connections and usage history.
+
+Open usage details on the account page to see the remaining percentages for **management requests** and **automatic connection renewal**. Requests have different processing costs, so these percentages are not a count of remaining requests. Details load only when opened or refreshed. The monthly accounting reset is not a promised synchronization recovery time.
+
+- **Automatic recovery / retry shortly:** keep the same account and vault and wait for the displayed delay. Do not erase plugin settings or register a new PC to clear a wait. Local notes stay on your devices and transfers resume when the connection recovers. Timing depends on the server and network.
+- **Management allowance reached:** ordinary management work may pause, while sign-in status, subscription management, account export, deletion and connection recovery have separate paths. Repeated attempts may require a short wait. Existing identity and billing requirements still apply to cancellation and deletion.
+- **New PC registration capacity reached:** preserve your vault and connections and use the displayed support channel. Creating duplicate accounts or paying again does not resolve this state.
+
+Account export is not a note backup. Reading and copying existing local notes does not require an active Helenite subscription.
+
 ## Account or host recovery
 
-- **Same PC, access revoked:** use **Check PC registration** and follow **Confirm account again → Recover PC registration** if offered. Logging in alone does not undo revocation. This path needs the PC's saved credentials.
+For **the same PC**, follow the buttons actually shown under its external connection status:
+
+| What you see | What to do |
+| --- | --- |
+| **Recover PC registration** | Choose it and confirm **Recover registration**. If **Confirm account again** appears, complete that step first. Signing in alone does not restore access. |
+| **Check this PC’s connection** with **Check PC registration** | Check the registration, then follow the updated status. Keep the saved connection information. |
+| **Start new recovery** | The earlier recovery was canceled. Confirm a new recovery on this same PC. |
+
+These recovery steps need the PC's saved credentials. If a button is absent or the state remains unclear, keep your files/settings and contact **admin@egress.llc** or your test organizer.
+
 - **Lost or replaced PC:** when registration reports another PC, **Replace the previous PC** requires a recent email-code login and explicit confirmation. It transfers connection authority, not notes or encryption keys. You need a surviving vault copy and a paired device. Do not erase the surviving copies to start over.
 - **Payment pending/needs review:** do not pay again to clear it. Preserve the displayed status and contact the person/channel that supplied your test access. Public customer support and live payment recovery are not yet available in this draft.
 
 Downloading and installing Helenite is free; synchronization requires a subscription or an explicitly offered trial. The planned price is USD 3/month or USD 24/year. Existing local notes remain readable, copyable and exportable after expiry. Developer-only local testing is not a permanent free sync plan.
 
 When public billing opens, ordinary cancellation stops the next renewal while preserving the paid period. The final service, refund and relay-allowance terms must be published before payment opens; this guide is not a billing agreement. Final release acceptance of subscription enforcement remains pending.
+
+## Save account data or delete an account
+
+**Prepared for public service; not currently active for general use.** When available, these controls appear in the website's ordinary signed-in account page, not the app-connection approval screen. They are hidden for Sandbox test accounts. If they are unavailable, send your request to **admin@egress.llc**; do not change account settings to bypass the restriction.
+
+1. Keep a separate backup of your local vault. Under **Account data and deletion**, **Save my account data** downloads account information only. It does **not** back up notes or encryption keys.
+2. To stop future renewals, use **Manage subscription**. Account deletion does not cancel a subscription. If cancellation is scheduled, use the remaining paid period and request deletion after the subscription actually ends; pending payments or billing review must also be resolved.
+3. Choose **Verify my email again** and complete the email-code login. Within 10 minutes, choose **Delete account**, check the displayed email and choose **Confirm deletion**.
+4. If deletion is in progress or the result cannot be confirmed, use **Check deletion status**; follow the displayed retry instruction for the same request. Only **Account deleted** confirms completion. If it remains pending, contact support.
+
+Deletion ends account sign-in and external access. Local notes remain readable, copyable and exportable; billing, security and usage records may remain as described in the [privacy notice](https://helenite.net/privacy). Never send support your password, email code, connection link, encryption keys or vault backup.
 
 ## Updates and getting help
 
@@ -116,5 +150,5 @@ For an issue, record what you did, the device/OS, the time, and the exact visibl
 | Storage | Each device needs room for its local notes, pending changes and recovery copies. Available device storage is not unlimited relay traffic. |
 | Relay service | Included transfer allowance and limit behavior are not finalized for public sale. |
 | Availability | Host awake/online with Helenite and Obsidian running; phone Obsidian in foreground. No USB requirement. |
-| Validation | Mac signing, Linux signed-package/VM checks and Windows VM checks do not complete ordinary-user physical-device acceptance. Windows signing and public release remain pending. |
+| Validation | Signing and package checks must match the exact candidate. Earlier Mac notarization and Linux/Windows VM checks do not certify this new candidate or complete ordinary-user physical-device acceptance. Windows signing and public release remain pending. |
 
