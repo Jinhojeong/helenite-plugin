@@ -27,16 +27,16 @@ Until listing approval, invited testers can install the three files from the mat
 
 **Community payment category: Paid.** Downloading and installing the plugin is free; Helenite synchronization requires an active subscription or an explicitly offered trial. Existing local notes remain readable, copyable and exportable after the subscription ends. Development-only local testing is not a permanent free synchronization plan.
 
-The planned commercial service costs **USD 3 per month or USD 24 per year** and will require a Helenite account. The desktop app implements account sign-in, PC registration, subscription eligibility renewal and connection recovery. These features have not opened as a public production service: live payments, public account enrollment and production connectivity remain unavailable. Do not treat this build as a purchased or activated subscription. Invited tests use isolated test accounts or a locally configured host; the plugin itself has no account login screen. Final subscription enforcement across the offered connection modes still requires release acceptance.
+The listed prices are **USD 3 per month or USD 24 per year**. The public account page offers email sign-in. Paid checkout is closed during this test. Invited testers can use the connection details supplied with their invitation.
 
-Your computer provides the vault host. A subscription is not hosted vault storage. Final included relay traffic and release limits must be published before paid access is enabled.
+Your computer hosts the vault. The listed plan includes **10 GB of relay transfers per account per UTC calendar month**. An available direct connection can continue after that allowance is used. The relay allowance resets on the first of the month at 00:00 UTC. Read the [service terms](https://helenite.net/terms?lang=en).
 
 ## Network and privacy disclosures
 
 - **Your configured host/relay:** the plugin sends and receives encrypted sync records, pairing requests and connection status using HTTP(S) and WebSocket connections. Connection credentials and keys are retained in this vault's local plugin data. Production external connections require HTTPS/WSS; loopback HTTP is available for local development.
 - **Helenite-managed connectivity, when configured:** Cloudflare Workers and Durable Objects carry encrypted note records and manage routing, device authorization and usage limits. The service also processes routing/account/device identifiers, connection timing, traffic volumes, protocol authorization headers and pairing metadata. Content encryption does not hide all transport metadata. Operational authorization, quota and accounting records are retained. Traffic can be buffered briefly for delivery; the service is not a backup or permanent vault store. Host availability is still required.
 - **Obsidian and GitHub:** Obsidian obtains installation/update assets from this public GitHub repository. There is no separate plugin self-updater.
-- **Client telemetry:** this plugin does not send analytics, advertising or crash-report telemetry. Server-side operational records are separate from client analytics. Read the [pre-release privacy notice](https://helenite.net/privacy) for the current test handling, providers and remaining operational limits. A complete operational policy is required before public service activation.
+- **Client telemetry:** this plugin does not send analytics, advertising or crash-report telemetry. Server-side operational records are separate from client analytics. The [privacy notice](https://helenite.net/privacy) describes how Egress and its providers handle these records.
 - **Files:** the plugin works within the currently opened vault, including its local plugin settings and recovery copies under `.helenite/backups`. It does not request access outside that vault. Local plugin settings can contain encryption keys and credentials; local notes and recovery copies are not separately encrypted at rest by Helenite. Protect the device and its backups. The separately installed desktop host application also keeps local service configuration and is not part of this plugin package. Hidden files and Obsidian configuration are excluded from sync.
 
 Do not post connection QRs, connection codes, plugin data files, keys or vault contents in public issues. A connection code grants access to begin pairing and is private.
@@ -48,7 +48,7 @@ Do not post connection QRs, connection codes, plugin data files, keys or vault c
 - Existing binary replacements and remote deletions require an explicit review decision. Choices apply to the versions shown; if either version changes, review again. Interrupted writes or unexpected edits remain held for recovery, while other eligible files can continue syncing.
 - Recovery copies stay outside the synchronized file list. The plugin's recovery view restores a separate file into **Helenite Recovered** for inspection. These local copies do not replace an independent backup and cannot recover a lost encryption key or notes missing from every device.
 - Mobile sync runs while Obsidian is active. Continuous background synchronization on iOS or Android is not guaranteed.
-- Declared minimum Obsidian version: **1.7.2**. Full minimum-version and physical-device release acceptance are still pending.
+- Helenite 0.1.5 requires **Obsidian 1.7.4** or later. The plugin was tested on desktop Obsidian 1.7.4 for settings persistence and two-way sync with a local test client. Final physical-device testing is pending.
 - Start with a disposable test vault and retain your own backups. Automated test results do not replace Windows, macOS, Linux, Android and iPhone acceptance.
 
 ## Source and license
@@ -59,4 +59,4 @@ The LICENSE in this repository governs use of the distributed plugin. Source is 
 
 The bundle currently contains first-party Helenite runtime code only; Obsidian is supplied by the host application. The build review rejects added bundled third-party dependencies until their notices and license obligations are explicitly reviewed.
 
-Product information: [helenite.net](https://helenite.net). Privacy and support contact: **admin@egress.llc**. This public artifact repository may be used for non-sensitive installation issues after it is created. Do not post credentials or personal vault contents.
+Product information: [helenite.net](https://helenite.net). Privacy and support contact: **admin@egress.llc**. Do not post credentials or personal vault contents.

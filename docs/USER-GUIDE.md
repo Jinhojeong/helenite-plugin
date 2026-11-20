@@ -2,7 +2,7 @@
 
 [한국어](USER-GUIDE.ko.md)
 
-**Alpha user guide · updated 12 November 2026.** Desktop 0.1.10 and plugin 0.1.4 are local release candidates being prepared; they are not a public stable release. Desktop and plugin version numbers are separate. Helenite is an independent Egress product, not an official Obsidian product. General desktop downloads and payments are not open yet; the Community plugins submission still needs current approval confirmation. A separately published plugin alpha is for invited testing and review, not an activated public service. The steps below distinguish the planned public route from the current invited test route. The complete, unaided first-use journey on the final physical devices is still awaiting acceptance.
+**Alpha user guide · 20 November 2026.** Helenite is an independent Egress product. During the invited test, Ubuntu x64 users can download desktop 0.1.13. The Windows and Mac test installers are 0.1.12. The desktop app and the Obsidian plugin have separate versions. The plugin listing and public subscriptions are not open yet.
 
 ## What you need
 
@@ -14,7 +14,7 @@ Your phone still uses Obsidian. It receives a local copy of the notes; it does n
 
 ## 1. Set up the host computer
 
-1. For now, use only the installer supplied for your invited test. When public downloads open, use the matching download at [helenite.net](https://helenite.net/).
+1. If you have an invitation to test Helenite on Ubuntu x64, download the [Egress-signed Helenite 0.1.13 installer](https://downloads.helenite.net/releases/0.1.13/linux-x64/Helenite-0.1.13-linux-x64.deb). For Mac or Windows, use the installer supplied by your test organizer. Your organizer also provides access to the invited sync test.
 2. Install and open Helenite. Current candidates target **macOS Apple Silicon (ARM64)**, **Windows x64**, and an **Ubuntu 22.04 x64 DEB**. They do not establish support for Intel Macs, Windows ARM or every Linux distribution. Use the signing and verification result supplied with that exact installer: earlier Mac notarization or Linux package signatures do not certify a newly built file. Windows signing is still pending, so its current installer is a test build, not the final public release.
 3. Open your test vault in Obsidian. In Helenite choose **Find my vault**, select that same folder, then **Install Helenite**. This adds the plugin to that vault only; merely installing the desktop app does not add it to every vault.
 4. In Obsidian open **Settings → Community plugins** and enable **Helenite — By Egress**. Allow community plugins only after checking the supplied plugin. If it does not appear, refresh the installed list or reopen Obsidian; make sure you opened the selected vault.
@@ -82,6 +82,8 @@ Remote deletions and replacement of existing attachments also wait for review. C
 
 For a previous or incomplete file, open **Help · Recovery → Recovery copies → View copies**, then **Restore as a separate file**. Helenite writes a new file in **Helenite Recovered**, leaving the current file alone. The recovered file joins the next sync. Inspect it before moving its content back.
 
+The list shows up to 50 entries, with incomplete work first. A missing entry does not by itself mean the copy was deleted. Keep hidden Helenite state and plugin settings intact, and contact **admin@egress.llc** or your test organizer.
+
 If a write was interrupted, first restore and inspect a separate copy. Use **Keep current file/state** only after checking the current content: it can accept a partial file or an absent file as the state to sync. Keep recovery copies until you are satisfied.
 
 Sync and recovery copies are not an independent backup. Keep a separate, protected backup of your vault, including the private Helenite settings needed for recovery. Do not manually delete hidden Helenite state or share `.obsidian/plugins/helenite/data.json`; it contains connection keys. A lost encryption key cannot be recovered from an email login.
@@ -113,11 +115,16 @@ For **the same PC**, follow the buttons actually shown under its external connec
 These recovery steps need the PC's saved credentials. If a button is absent or the state remains unclear, keep your files/settings and contact **admin@egress.llc** or your test organizer.
 
 - **Lost or replaced PC:** when registration reports another PC, **Replace the previous PC** requires a recent email-code login and explicit confirmation. It transfers connection authority, not notes or encryption keys. You need a surviving vault copy and a paired device. Do not erase the surviving copies to start over.
+- **Lost phone or exposed connection code:** on the host PC using managed external access, run Helenite and Obsidian with the current plugin, with that vault connected to the running host. Open **Connected devices**, choose **Disconnect** for the device or **Cancel invitation** for an unused invitation, and confirm. **Refresh** the list and check for **Disconnected**. **Connection blocked · Relay cleanup pending** means the device is blocked but cleanup remains; use **Retry cleanup**. Disconnection blocks the next sync; already received notes remain. It does not remotely erase files. If the controls are absent or the result cannot be confirmed, preserve files/settings and contact support.
 - **Payment pending/needs review:** do not pay again to clear it. Preserve the displayed status and contact the person/channel that supplied your test access. Public customer support and live payment recovery are not yet available in this draft.
 
 Downloading and installing Helenite is free; synchronization requires a subscription or an explicitly offered trial. The planned price is USD 3/month or USD 24/year. Existing local notes remain readable, copyable and exportable after expiry. Developer-only local testing is not a permanent free sync plan.
 
-When public billing opens, ordinary cancellation stops the next renewal while preserving the paid period. The final service, refund and relay-allowance terms must be published before payment opens; this guide is not a billing agreement. Final release acceptance of subscription enforcement remains pending.
+**Ordinary cancellation.** Turn off renewal in **Manage subscription** on your account page. Your account shows when paid sync access ends. You can keep syncing until then and open your local notes afterwards.
+
+**Full refund.** You can keep syncing while a refund request is under review if your paid access is still active. Once a full refund for the current paid period is approved, sync access for that period ends. Helenite requests that Paddle stop the next renewal if it is still active. Your account shows whether Paddle has confirmed the change. To check the latest status, open **Manage subscription**. Your local notes remain available.
+
+Both plans include 10 GB of relayed data per account each UTC calendar month. That total includes uploads, downloads, each receiving device and any retransmission. Direct transfers use no relay bytes. The [service terms](https://helenite.net/terms?lang=en) explain how relay messages, events and connections are counted. Public sales are still closed.
 
 ## Save account data or delete an account
 
@@ -134,21 +141,23 @@ Deletion ends account sign-in and external access. Local notes remain readable, 
 
 Egress's designated support and privacy contact is **admin@egress.llc**. For an invited test, continue using the test organizer's instructions. No response-time or production-support availability is promised by this draft.
 
-The desktop's **Connection help** includes **Helenite updates**. Once a verified public feed is available, the flow is **Check for updates → Download update → Open installer**. Installation starts only when you choose it; there is no silent installation or automatic rollback. The public feed is currently unpublished, so an unavailable/failed check does not mean your installation is current.
+In **Connection help → Helenite updates**, choose **Check for updates → Download update → Open installer**. Finish syncing first. The **You are using the latest version** message confirms that the check succeeded.
+
+On Ubuntu with Helenite 0.1.13 or later, leave Helenite open and approve Ubuntu’s request to install the update. When Helenite confirms the new version was installed, quit and reopen the app. If installation fails or you cancel, choose **Open installer** to retry or **Show installer in folder** to locate the verified download. The recovery message also shows the file’s full location. Earlier versions use Ubuntu’s default package installer. If its window closes before you can approve the first upgrade, open Files, press Ctrl+L and enter `~/.local/share/app.helenite.sync/verified-updates` (or `$XDG_DATA_HOME/app.helenite.sync/verified-updates` if you use a custom data folder). Open the newest download folder and choose **Open With** on the Helenite `.deb` to select your package installer. [Download the Ubuntu x64 0.1.13 installer](https://downloads.helenite.net/releases/0.1.13/linux-x64/Helenite-0.1.13-linux-x64.deb)
 
 After community approval, update the Obsidian plugin through **Settings → Community plugins** on each device. Before approval, use the update instructions from your test organizer and preserve existing connection settings. Desktop and plugin versions are separate; update all paired devices when a feature requires it.
 
-For an issue, record what you did, the device/OS, the time, and the exact visible message. On the desktop use **Connection help → View diagnostics → Copy diagnostics** and inspect the preview before sharing it privately with your test organizer. Nothing is automatically uploaded. The report excludes notes, vault names/paths, account emails, URLs/IPs and connection secrets. It cannot prove that a phone received a note. Never send passwords, email codes, connection links or plugin `data.json`.
+For an issue, record what you did, the device/OS, the Helenite desktop version, the Obsidian and Helenite plugin versions on each device, the time, and the exact visible message. On the desktop use **Connection help → View diagnostics → Copy diagnostics** and inspect the preview before sharing it privately with your test organizer. The report does not identify the running plugin version, so include it separately. Nothing is automatically uploaded. The report excludes notes, vault names/paths, account emails, URLs/IPs and connection secrets. It cannot prove that a phone received a note. Never send passwords, email codes, connection links or plugin `data.json`.
 
 ## Current limits
 
 | Area | Current boundary |
 | --- | --- |
-| Plugin compatibility | Obsidian **1.7.2 or later** is declared; minimum-version and complete final-device acceptance remain pending. |
+| Plugin compatibility | Plugin **0.1.5** requires **Obsidian 1.7.4 or later**. At the minimum version, it loaded, restored settings after restart and synced notes both ways with a local test client. The **0.1.4** package submitted for review declares a minimum of **1.7.2**. The full mobile setup still awaits device testing. |
 | File size | Up to **64 MiB** per file once every approved device and the host support large files. Otherwise the **8 MiB** compatibility limit remains. Oversized files are retained locally and deferred, not silently uploaded. |
 | Text merging | Automatic merging and manual review text are bounded to **128 KiB**. Overlapping edits may require your choice. |
 | Storage | Each device needs room for its local notes, pending changes and recovery copies. Available device storage is not unlimited relay traffic. |
-| Relay service | Included transfer allowance and limit behavior are not finalized for public sale. |
+| Relay service | 10 GB per account and UTC calendar month. If a monthly limit is reached, use an available direct connection or wait until 00:00 UTC on the first of next month. No automatic overage charge. |
 | Availability | Host awake/online with Helenite and Obsidian running; phone Obsidian in foreground. No USB requirement. |
-| Validation | Signing and package checks must match the exact candidate. Earlier Mac notarization and Linux/Windows VM checks do not certify this new candidate or complete ordinary-user physical-device acceptance. Windows signing and public release remain pending. |
+| Desktop builds | Ubuntu x64 **0.1.13** was tested in a virtual machine. Egress signed the Mac **0.1.12** installer and Apple notarized it. The Windows **0.1.12** test installer is unsigned. |
 
