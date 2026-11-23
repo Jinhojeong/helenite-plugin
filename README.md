@@ -3,7 +3,7 @@
 By **Egress**. Independently developed encrypted vault sync for Obsidian.
 Helenite is not an official Obsidian product and is not affiliated with Obsidian.
 
-**Development alpha. The plugin is available in the [Obsidian community directory](https://community.obsidian.md/plugins/helenite). Desktop hosting is in invited testing and new subscriptions are closed.**
+**Development alpha. The plugin is available in the [Obsidian community directory](https://community.obsidian.md/plugins/helenite). Installation is free. Sync through Helenite is currently by invitation. New subscriptions are closed.** [Current availability and setup](https://helenite.net/guide?lang=en)
 This repository contains built plugin release assets. Source development takes place in a separate private repository.
 Obsidian supports a [separate private source repository](https://docs.obsidian.md/community-directory/manage-entry) for build verification through its Community directory GitHub App.
 
