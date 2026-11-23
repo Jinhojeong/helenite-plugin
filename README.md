@@ -3,25 +3,22 @@
 By **Egress**. Independently developed encrypted vault sync for Obsidian.
 Helenite is not an official Obsidian product and is not affiliated with Obsidian.
 
-**Release status: development alpha; community listing and paid service are not yet available.**
+**Development alpha. The plugin is available in the [Obsidian community directory](https://community.obsidian.md/plugins/helenite). Desktop hosting is in invited testing and new subscriptions are closed.**
 This repository contains built plugin release assets. Source development takes place in a separate private repository.
 Obsidian supports a [separate private source repository](https://docs.obsidian.md/community-directory/manage-entry) for build verification through its Community directory GitHub App.
-Closed-source community submissions are reviewed by Obsidian case by case; this document does not indicate approval.
 
 ## Install and connect
 
-After the community listing is approved:
-
-1. In Obsidian, open **Settings → Community plugins → Browse**, search for **Helenite**, then install and enable it in the vault you want to connect.
-2. Open Helenite on your host computer and select its vault. Keep the host computer and its Obsidian vault running.
-3. On your phone, create an empty local vault in Obsidian with the same name shown on the PC, then install and enable Helenite in that vault. Scan the computer's connection QR, choose the target vault if Obsidian asks, and confirm the connection.
-4. Compare the displayed confirmation on both devices and approve the phone on your computer.
+1. In the Helenite desktop app, select your computer’s Obsidian vault and install the plugin there. Enable Helenite in Obsidian and keep the host app and vault open.
+2. On your phone, create and open an empty local Obsidian vault with the same name shown on the computer.
+3. In that vault, open **Settings → Community plugins → Browse**, search for **Helenite**, select **Install**, then **Enable**. The directory lists Jinho Jeong. The installed plugin credits Egress.
+4. Scan the computer's connection QR. Choose the target vault if prompted, compare the confirmation on both devices and approve the phone on your computer.
 
 The QR connects a plugin that is already installed; it does not install a plugin or create an Obsidian vault. Use an empty local vault for the first test. An Android phone does not need access to the host's iCloud folder.
 
 Setup, troubleshooting and recovery: [English guide](docs/USER-GUIDE.md) · [한국어 가이드](docs/USER-GUIDE.ko.md).
 
-Until listing approval, invited testers can install the three files from the matching [GitHub release](https://github.com/Jinhojeong/helenite-plugin/releases) in their vault's plugin folder and enable Helenite. General users should wait for the community installation route. Obsidian manages plugin updates; Helenite does not install or update itself or its dependencies.
+Obsidian manages plugin updates through the directory. The three files for a specific release are also available in [GitHub releases](https://github.com/Jinhojeong/helenite-plugin/releases).
 
 ## Payment and accounts
 

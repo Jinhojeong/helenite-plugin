@@ -2,7 +2,7 @@
 
 [한국어](USER-GUIDE.ko.md)
 
-**Alpha user guide · 20 November 2026.** Helenite is an independent Egress product. During the invited test, Ubuntu x64 users can download desktop 0.1.13. The Windows and Mac test installers are 0.1.12. The desktop app and the Obsidian plugin have separate versions. The plugin listing and public subscriptions are not open yet.
+**Alpha user guide · 23 November 2026.** Helenite is an independent Egress product. Invited testers can download 0.1.13 for Ubuntu x64 or 0.1.12 for Apple silicon Macs. The Windows test installer is 0.1.12. The desktop app and the Obsidian plugin have separate versions. The [Helenite plugin page](https://community.obsidian.md/plugins/helenite) is public. Sync access is by invitation and public subscriptions are not open yet.
 
 ## What you need
 
@@ -14,7 +14,7 @@ Your phone still uses Obsidian. It receives a local copy of the notes; it does n
 
 ## 1. Set up the host computer
 
-1. If you have an invitation to test Helenite on Ubuntu x64, download the [Egress-signed Helenite 0.1.13 installer](https://downloads.helenite.net/releases/0.1.13/linux-x64/Helenite-0.1.13-linux-x64.deb). For Mac or Windows, use the installer supplied by your test organizer. Your organizer also provides access to the invited sync test.
+1. If you are an invited tester, download the [Mac 0.1.12 DMG for Apple silicon](https://downloads.helenite.net/releases/0.1.12/macos-arm64/Helenite-0.1.12-macos-arm64.dmg) or the [Ubuntu x64 0.1.13 DEB](https://downloads.helenite.net/releases/0.1.13/linux-x64/Helenite-0.1.13-linux-x64.deb). On Windows x64, use the 0.1.12 installer supplied by your test organizer. Your invitation also provides access to the sync test.
 2. Install and open Helenite. Current candidates target **macOS Apple Silicon (ARM64)**, **Windows x64**, and an **Ubuntu 22.04 x64 DEB**. They do not establish support for Intel Macs, Windows ARM or every Linux distribution. Use the signing and verification result supplied with that exact installer: earlier Mac notarization or Linux package signatures do not certify a newly built file. Windows signing is still pending, so its current installer is a test build, not the final public release.
 3. Open your test vault in Obsidian. In Helenite choose **Find my vault**, select that same folder, then **Install Helenite**. This adds the plugin to that vault only; merely installing the desktop app does not add it to every vault.
 4. In Obsidian open **Settings → Community plugins** and enable **Helenite — By Egress**. Allow community plugins only after checking the supplied plugin. If it does not appear, refresh the installed list or reopen Obsidian; make sure you opened the selected vault.
@@ -33,8 +33,9 @@ After a PC is registered, access renewal is automatic. Ordinary sign-in expiry d
 ## 3. Prepare Obsidian on the phone
 
 1. Check the vault name shown under **Connect phone** in the PC's Helenite app. In Obsidian on the phone, create and open an **empty local vault with that exact name**. For example, if the PC shows `My research`, use `My research` on the phone too. This prepares the local copy of the same connected vault; the PC's notes will download into it. On iPhone/iPad, turn off **Store in iCloud** for this new vault; on Android choose device storage available to Obsidian.
-2. **After listing approval:** open **Settings → Community plugins → Browse**, search for **Helenite**, check **By Egress**, then **Install → Enable**.
-3. **Until approval:** Helenite cannot be found through that search. Use only the vault/plugin package and device-specific instructions supplied for your invited test, then enable Helenite in that vault. Do not extract a test package over an existing personal vault. If no installation instructions were supplied, stop here and ask your test organizer.
+2. In **Settings → Community plugins → Browse**, search for **Helenite** and open its [official listing](https://community.obsidian.md/plugins/helenite). Select **Install**, then **Enable**.
+
+The directory lists **Jinho Jeong**, and the installed plugin identifies **Egress** as its author. Use Obsidian 1.7.4 or later.
 
 You install and enable the plugin separately in each vault that uses Helenite. The QR does not install a plugin or create/open a phone vault for you. Obsidian's **Set up Obsidian Sync** option is for Obsidian's own service.
 
@@ -145,7 +146,7 @@ In **Connection help → Helenite updates**, choose **Check for updates → Down
 
 On Ubuntu with Helenite 0.1.13 or later, leave Helenite open and approve Ubuntu’s request to install the update. When Helenite confirms the new version was installed, quit and reopen the app. If installation fails or you cancel, choose **Open installer** to retry or **Show installer in folder** to locate the verified download. The recovery message also shows the file’s full location. Earlier versions use Ubuntu’s default package installer. If its window closes before you can approve the first upgrade, open Files, press Ctrl+L and enter `~/.local/share/app.helenite.sync/verified-updates` (or `$XDG_DATA_HOME/app.helenite.sync/verified-updates` if you use a custom data folder). Open the newest download folder and choose **Open With** on the Helenite `.deb` to select your package installer. [Download the Ubuntu x64 0.1.13 installer](https://downloads.helenite.net/releases/0.1.13/linux-x64/Helenite-0.1.13-linux-x64.deb)
 
-After community approval, update the Obsidian plugin through **Settings → Community plugins** on each device. Before approval, use the update instructions from your test organizer and preserve existing connection settings. Desktop and plugin versions are separate; update all paired devices when a feature requires it.
+On each device, check **Settings → Community plugins** for a Helenite update. For an invited build, follow the update instructions for your test and keep its existing connection settings. The desktop app and plugin have separate versions.
 
 For an issue, record what you did, the device/OS, the Helenite desktop version, the Obsidian and Helenite plugin versions on each device, the time, and the exact visible message. On the desktop use **Connection help → View diagnostics → Copy diagnostics** and inspect the preview before sharing it privately with your test organizer. The report does not identify the running plugin version, so include it separately. Nothing is automatically uploaded. The report excludes notes, vault names/paths, account emails, URLs/IPs and connection secrets. It cannot prove that a phone received a note. Never send passwords, email codes, connection links or plugin `data.json`.
 
@@ -153,7 +154,7 @@ For an issue, record what you did, the device/OS, the Helenite desktop version, 
 
 | Area | Current boundary |
 | --- | --- |
-| Plugin compatibility | Plugin **0.1.5** requires **Obsidian 1.7.4 or later**. At the minimum version, it loaded, restored settings after restart and synced notes both ways with a local test client. The **0.1.4** package submitted for review declares a minimum of **1.7.2**. The full mobile setup still awaits device testing. |
+| Plugin compatibility | Plugin **0.1.5** requires **Obsidian 1.7.4 or later**. At the minimum version, it loaded, restored settings after restart and synced notes both ways with a local test client. The full mobile setup still awaits device testing. |
 | File size | Up to **64 MiB** per file once every approved device and the host support large files. Otherwise the **8 MiB** compatibility limit remains. Oversized files are retained locally and deferred, not silently uploaded. |
 | Text merging | Automatic merging and manual review text are bounded to **128 KiB**. Overlapping edits may require your choice. |
 | Storage | Each device needs room for its local notes, pending changes and recovery copies. Available device storage is not unlimited relay traffic. |
