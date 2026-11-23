@@ -12,7 +12,7 @@ Obsidian supports a [separate private source repository](https://docs.obsidian.m
 1. In the Helenite desktop app, select your computer’s Obsidian vault and install the plugin there. Enable Helenite in Obsidian and keep the host app and vault open.
 2. On your phone, create and open an empty local Obsidian vault with the same name shown on the computer.
 3. In that vault, open **Settings → Community plugins → Browse**, search for **Helenite**, select **Install**, then **Enable**. The directory lists Jinho Jeong. The installed plugin credits Egress.
-4. Scan the computer's connection QR. Choose the target vault if prompted, compare the confirmation on both devices and approve the phone on your computer.
+4. Scan the computer's connection QR and choose the target vault if prompted. Approve the phone on the computer when all four English words match in order. If one device shows a long code, expand **Full fingerprint for older versions** on the other device and compare the complete codes.
 
 The QR connects a plugin that is already installed; it does not install a plugin or create an Obsidian vault. Use an empty local vault for the first test. An Android phone does not need access to the host's iCloud folder.
 
@@ -45,7 +45,7 @@ Do not post connection QRs, connection codes, plugin data files, keys or vault c
 - Existing binary replacements and remote deletions require an explicit review decision. Choices apply to the versions shown; if either version changes, review again. Interrupted writes or unexpected edits remain held for recovery, while other eligible files can continue syncing.
 - Recovery copies stay outside the synchronized file list. The plugin's recovery view restores a separate file into **Helenite Recovered** for inspection. These local copies do not replace an independent backup and cannot recover a lost encryption key or notes missing from every device.
 - Mobile sync runs while Obsidian is active. Continuous background synchronization on iOS or Android is not guaranteed.
-- Helenite 0.1.6 requires **Obsidian 1.7.4** or later. Version 0.1.5 was tested on desktop Obsidian 1.7.4 for settings persistence and two-way sync with a local test client. Final physical-device testing is pending.
+- Helenite 0.1.7 requires **Obsidian 1.7.4** or later. Version 0.1.5 was tested on desktop Obsidian 1.7.4 for settings persistence and two-way sync with a local test client. Physical-device testing of the four-word comparison is pending.
 - Start with a disposable test vault and retain your own backups. Automated test results do not replace Windows, macOS, Linux, Android and iPhone acceptance.
 
 ## Source and license
@@ -54,6 +54,6 @@ Helenite was independently implemented and does not include or depend on the Obs
 
 The LICENSE in this repository governs use of the distributed plugin. Source is private; public binaries do not imply an open-source license.
 
-The bundle currently contains first-party Helenite runtime code only; Obsidian is supplied by the host application. The build review rejects added bundled third-party dependencies until their notices and license obligations are explicitly reviewed.
+The English words used for pairing come from the BIP-39 word list supplied by python-mnemonic. Its MIT license and copyright notice are included in the distributed main.js. The host application supplies Obsidian.
 
 Product information: [helenite.net](https://helenite.net). Privacy and support contact: **admin@egress.llc**. Do not post credentials or personal vault contents.

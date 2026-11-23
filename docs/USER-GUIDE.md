@@ -47,7 +47,7 @@ You install and enable the plugin separately in each vault that uses Helenite. T
 2. On the phone, keep the local vault with the matching name open with Helenite enabled. Scan the PC's QR with the camera and allow it to open Obsidian.
 3. If scanning or opening fails, use **Copy connection link** or copy the code on the PC, and transfer it privately to your own phone. In Obsidian open the command palette and run **Helenite: Open sync panel**. Choose **Paste received code**, or **Enter manually**, paste the full code/link and choose **Next**.
 4. Review the destination vault and its name. If it contains files, Helenite asks whether to also sync them. Use an empty test vault unless you deliberately want those existing files included. Choose **Request connection to computer**.
-5. Compare the verification phrases on both devices and approve that phone on the PC **only if they match**. A familiar device name alone is not enough. Keep the phone in Obsidian while the initial transfer finishes.
+5. Compare the four English words on the phone and PC. Approve the phone on the PC **only if all four match in order**. If an older version displays a long code, expand **Full fingerprint for older versions** on the other device and compare the complete codes. Keep Obsidian open on the phone until the initial transfer finishes.
 
 Treat a connection link/code as private. Do not post it in a screenshot or support request. If it expires, create a fresh code on the host. If you see **Finish the open connection dialog first**, return to the existing dialog and complete or close it before opening another invitation; do not keep scanning or delete connection settings.
 
@@ -154,7 +154,7 @@ For an issue, record what you did, the device/OS, the Helenite desktop version, 
 
 | Area | Current boundary |
 | --- | --- |
-| Plugin compatibility | Plugin **0.1.6** requires **Obsidian 1.7.4 or later**. On Obsidian 1.7.4, version 0.1.5 restored settings after restart and synced notes both ways with a local test client. The full mobile setup still awaits device testing. |
+| Plugin compatibility | Plugin **0.1.7** requires **Obsidian 1.7.4 or later**. On Obsidian 1.7.4, version 0.1.5 restored settings after restart and synced notes both ways with a local test client. The four-word comparison in 0.1.7 still awaits physical phone testing. |
 | File size | Up to **64 MiB** per file once every approved device and the host support large files. Otherwise the **8 MiB** compatibility limit remains. Oversized files are retained locally and deferred, not silently uploaded. |
 | Text merging | Automatic merging and manual review text are bounded to **128 KiB**. Overlapping edits may require your choice. |
 | Storage | Each device needs room for its local notes, pending changes and recovery copies. Available device storage is not unlimited relay traffic. |
