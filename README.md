@@ -45,7 +45,7 @@ Do not post connection QRs, connection codes, plugin data files, keys or vault c
 - Existing binary replacements and remote deletions require an explicit review decision. Choices apply to the versions shown; if either version changes, review again. Interrupted writes or unexpected edits remain held for recovery, while other eligible files can continue syncing.
 - Recovery copies stay outside the synchronized file list. The plugin's recovery view restores a separate file into **Helenite Recovered** for inspection. These local copies do not replace an independent backup and cannot recover a lost encryption key or notes missing from every device.
 - Mobile sync runs while Obsidian is active. Continuous background synchronization on iOS or Android is not guaranteed.
-- Helenite 0.1.5 requires **Obsidian 1.7.4** or later. The plugin was tested on desktop Obsidian 1.7.4 for settings persistence and two-way sync with a local test client. Final physical-device testing is pending.
+- Helenite 0.1.6 requires **Obsidian 1.7.4** or later. Version 0.1.5 was tested on desktop Obsidian 1.7.4 for settings persistence and two-way sync with a local test client. Final physical-device testing is pending.
 - Start with a disposable test vault and retain your own backups. Automated test results do not replace Windows, macOS, Linux, Android and iPhone acceptance.
 
 ## Source and license

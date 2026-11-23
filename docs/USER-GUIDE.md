@@ -154,7 +154,7 @@ For an issue, record what you did, the device/OS, the Helenite desktop version, 
 
 | Area | Current boundary |
 | --- | --- |
-| Plugin compatibility | Plugin **0.1.5** requires **Obsidian 1.7.4 or later**. At the minimum version, it loaded, restored settings after restart and synced notes both ways with a local test client. The full mobile setup still awaits device testing. |
+| Plugin compatibility | Plugin **0.1.6** requires **Obsidian 1.7.4 or later**. On Obsidian 1.7.4, version 0.1.5 restored settings after restart and synced notes both ways with a local test client. The full mobile setup still awaits device testing. |
 | File size | Up to **64 MiB** per file once every approved device and the host support large files. Otherwise the **8 MiB** compatibility limit remains. Oversized files are retained locally and deferred, not silently uploaded. |
 | Text merging | Automatic merging and manual review text are bounded to **128 KiB**. Overlapping edits may require your choice. |
 | Storage | Each device needs room for its local notes, pending changes and recovery copies. Available device storage is not unlimited relay traffic. |
