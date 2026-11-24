@@ -2,7 +2,7 @@
 
 [한국어](USER-GUIDE.ko.md)
 
-**Alpha user guide · 23 November 2026.** Helenite is an independent Egress product. Invited testers can download 0.1.13 for Ubuntu x64 or 0.1.12 for Apple silicon Macs. The Windows test installer is 0.1.12. The desktop app and the Obsidian plugin have separate versions. The [Helenite plugin page](https://community.obsidian.md/plugins/helenite) is public. Sync access is by invitation and public subscriptions are not open yet.
+**Helenite user guide · 24 November 2026.** Download Helenite 0.1.14 for Ubuntu x64 or 0.1.12 for Apple silicon Macs. Windows x64 testers receive 0.1.12 from their organizer. Install the [Helenite plugin](https://community.obsidian.md/plugins/helenite) in Obsidian. Your [Helenite account](https://helenite.net/account?lang=en) shows your sync access and whether you can subscribe.
 
 ## What you need
 
@@ -10,11 +10,11 @@
 - One computer to host the vault. Keep **Helenite and Obsidian with the Helenite plugin running** on that computer. The desktop app alone does not synchronize its local notes.
 - A separate test vault and a backup of any notes you plan to bring over. Do not run iCloud, Obsidian Sync or another sync tool on that same vault during the current test.
 
-Your phone still uses Obsidian. It receives a local copy of the notes; it does not browse a remote disk. A USB cable is **not needed for everyday sync**. An approved external connection is needed to sync away from the host's network. The current test requires an invitation from the test organizer; installing the app does not by itself activate public service.
+Your phone still uses Obsidian. It receives a local copy of the notes; it does not browse a remote disk. A USB cable is **not needed for everyday sync**. An approved external connection is needed to sync away from the host's network.
 
 ## 1. Set up the host computer
 
-1. If you are an invited tester, download the [Mac 0.1.12 DMG for Apple silicon](https://downloads.helenite.net/releases/0.1.12/macos-arm64/Helenite-0.1.12-macos-arm64.dmg) or the [Ubuntu x64 0.1.13 DEB](https://downloads.helenite.net/releases/0.1.13/linux-x64/Helenite-0.1.13-linux-x64.deb). On Windows x64, use the 0.1.12 installer supplied by your test organizer. Your invitation also provides access to the sync test.
+1. Download the [Mac 0.1.12 DMG for Apple silicon](https://downloads.helenite.net/releases/0.1.12/macos-arm64/Helenite-0.1.12-macos-arm64.dmg) or the [Ubuntu x64 0.1.14 DEB](https://downloads.helenite.net/releases/0.1.14/linux-x64/Helenite-0.1.14-linux-x64.deb). On Windows x64, use the 0.1.12 installer supplied by your test organizer.
 2. Install and open Helenite. Current candidates target **macOS Apple Silicon (ARM64)**, **Windows x64**, and an **Ubuntu 22.04 x64 DEB**. They do not establish support for Intel Macs, Windows ARM or every Linux distribution. Use the signing and verification result supplied with that exact installer: earlier Mac notarization or Linux package signatures do not certify a newly built file. Windows signing is still pending, so its current installer is a test build, not the final public release.
 3. Open your test vault in Obsidian. In Helenite choose **Find my vault**, select that same folder, then **Install Helenite**. This adds the plugin to that vault only; merely installing the desktop app does not add it to every vault.
 4. In Obsidian open **Settings → Community plugins** and enable **Helenite — By Egress**. Allow community plugins only after checking the supplied plugin. If it does not appear, refresh the installed list or reopen Obsidian; make sure you opened the selected vault.
@@ -26,7 +26,7 @@ Under **Connection settings**, you can enable **Keep running when the window clo
 
 **Public route, once released:** sign in from Helenite using **Sign in with browser**, enter the emailed code in the browser, and approve the app connection. Check the account shown there. Choose **Register this PC** when the account panel offers it. Registration requires an eligible subscription; account login alone does not grant relay access.
 
-**Current invited test:** follow the organizer's test-account and connection instructions. If the app says **PC registration is not available yet**, public registration is closed. Do not guess server addresses, buy another subscription, or change developer settings to bypass that message.
+**PC registration:** Sign in to see whether this account can register a PC. If the app says **PC registration is not available yet**, keep your account and vault and check again later.
 
 After a PC is registered, access renewal is automatic. Ordinary sign-in expiry does not require repeatedly entering email codes for that registered PC. If access expires or the service cannot confirm eligibility, external transfer pauses and local notes remain available. Follow the displayed account/connection action.
 
@@ -125,7 +125,7 @@ Downloading and installing Helenite is free; synchronization requires a subscrip
 
 **Full refund.** You can keep syncing while a refund request is under review if your paid access is still active. Once a full refund for the current paid period is approved, sync access for that period ends. Helenite requests that Paddle stop the next renewal if it is still active. Your account shows whether Paddle has confirmed the change. To check the latest status, open **Manage subscription**. Your local notes remain available.
 
-Both plans include 10 GB of relayed data per account each UTC calendar month. That total includes uploads, downloads, each receiving device and any retransmission. Direct transfers use no relay bytes. The [service terms](https://helenite.net/terms?lang=en) explain how relay messages, events and connections are counted. Public sales are still closed.
+Both plans include 10 GB of relayed data per account each UTC calendar month. That total includes uploads, downloads, each receiving device and any retransmission. Direct transfers use no relay bytes. The [service terms](https://helenite.net/terms?lang=en) explain how relay messages, events and connections are counted. Check your [Helenite account](https://helenite.net/account?lang=en) for subscription availability.
 
 ## Save account data or delete an account
 
@@ -140,11 +140,11 @@ Deletion ends account sign-in and external access. Local notes remain readable, 
 
 ## Updates and getting help
 
-Egress's designated support and privacy contact is **admin@egress.llc**. For an invited test, continue using the test organizer's instructions. No response-time or production-support availability is promised by this draft.
+For help with Helenite or a privacy request, email **admin@egress.llc**.
 
 In **Connection help → Helenite updates**, choose **Check for updates → Download update → Open installer**. Finish syncing first. The **You are using the latest version** message confirms that the check succeeded.
 
-On Ubuntu with Helenite 0.1.13 or later, leave Helenite open and approve Ubuntu’s request to install the update. When Helenite confirms the new version was installed, quit and reopen the app. If installation fails or you cancel, choose **Open installer** to retry or **Show installer in folder** to locate the verified download. The recovery message also shows the file’s full location. Earlier versions use Ubuntu’s default package installer. If its window closes before you can approve the first upgrade, open Files, press Ctrl+L and enter `~/.local/share/app.helenite.sync/verified-updates` (or `$XDG_DATA_HOME/app.helenite.sync/verified-updates` if you use a custom data folder). Open the newest download folder and choose **Open With** on the Helenite `.deb` to select your package installer. [Download the Ubuntu x64 0.1.13 installer](https://downloads.helenite.net/releases/0.1.13/linux-x64/Helenite-0.1.13-linux-x64.deb)
+On Ubuntu with Helenite 0.1.13 or later, leave Helenite open and approve Ubuntu’s request to install the update. When Helenite confirms the new version was installed, quit and reopen the app. If installation fails or you cancel, choose **Open installer** to retry or **Show installer in folder** to locate the verified download. The recovery message also shows the file’s full location. Earlier versions use Ubuntu’s default package installer. If its window closes before you can approve the first upgrade, open Files, press Ctrl+L and enter `~/.local/share/app.helenite.sync/verified-updates` (or `$XDG_DATA_HOME/app.helenite.sync/verified-updates` if you use a custom data folder). Open the newest download folder and choose **Open With** on the Helenite `.deb` to select your package installer. [Download the Ubuntu x64 0.1.14 installer](https://downloads.helenite.net/releases/0.1.14/linux-x64/Helenite-0.1.14-linux-x64.deb)
 
 On each device, check **Settings → Community plugins** for a Helenite update. For an invited build, follow the update instructions for your test and keep its existing connection settings. The desktop app and plugin have separate versions.
 
@@ -154,11 +154,11 @@ For an issue, record what you did, the device/OS, the Helenite desktop version, 
 
 | Area | Current boundary |
 | --- | --- |
-| Plugin compatibility | Plugin **0.1.7** requires **Obsidian 1.7.4 or later**. On Obsidian 1.7.4, version 0.1.5 restored settings after restart and synced notes both ways with a local test client. The four-word comparison in 0.1.7 still awaits physical phone testing. |
+| Plugin compatibility | Plugin **0.1.8** requires **Obsidian 1.7.4 or later**. On Obsidian 1.7.4, version 0.1.5 restored settings after restart and synced notes both ways with a local test client. The four-word comparison in 0.1.7 still awaits physical phone testing. |
 | File size | Up to **64 MiB** per file once every approved device and the host support large files. Otherwise the **8 MiB** compatibility limit remains. Oversized files are retained locally and deferred, not silently uploaded. |
 | Text merging | Automatic merging and manual review text are bounded to **128 KiB**. Overlapping edits may require your choice. |
 | Storage | Each device needs room for its local notes, pending changes and recovery copies. Available device storage is not unlimited relay traffic. |
 | Relay service | 10 GB per account and UTC calendar month. If a monthly limit is reached, use an available direct connection or wait until 00:00 UTC on the first of next month. No automatic overage charge. |
 | Availability | Host awake/online with Helenite and Obsidian running; phone Obsidian in foreground. No USB requirement. |
-| Desktop builds | Ubuntu x64 **0.1.13** was tested in a virtual machine. Egress signed the Mac **0.1.12** installer and Apple notarized it. The Windows **0.1.12** test installer is unsigned. |
+| Desktop builds | Ubuntu x64 **0.1.14** was tested in a virtual machine. Egress signed the Mac **0.1.12** installer and Apple notarized it. The Windows **0.1.12** test installer is unsigned. |
 

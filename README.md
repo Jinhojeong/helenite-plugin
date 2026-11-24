@@ -3,7 +3,7 @@
 By **Egress**. Independently developed encrypted vault sync for Obsidian.
 Helenite is not an official Obsidian product and is not affiliated with Obsidian.
 
-**Development alpha. The plugin is available in the [Obsidian community directory](https://community.obsidian.md/plugins/helenite). Installation is free. Sync through Helenite is currently by invitation. New subscriptions are closed.** [Current availability and setup](https://helenite.net/guide?lang=en)
+The plugin is free to install from the [Obsidian community directory](https://community.obsidian.md/plugins/helenite). Check sync availability in your [Helenite account](https://helenite.net/account?lang=en). [Setup guide](https://helenite.net/guide?lang=en)
 This repository contains built plugin release assets. Source development takes place in a separate private repository.
 Obsidian supports a [separate private source repository](https://docs.obsidian.md/community-directory/manage-entry) for build verification through its Community directory GitHub App.
 
@@ -24,7 +24,7 @@ Obsidian manages plugin updates through the directory. The three files for a spe
 
 **Community payment category: Paid.** Downloading and installing the plugin is free; Helenite synchronization requires an active subscription or an explicitly offered trial. Existing local notes remain readable, copyable and exportable after the subscription ends. Development-only local testing is not a permanent free synchronization plan.
 
-The listed prices are **USD 3 per month or USD 24 per year**. The public account page offers email sign-in. Paid checkout is closed during this test. Invited testers can use the connection details supplied with their invitation.
+The listed prices are **USD 3 per month or USD 24 per year**. Sign in by email on your [Helenite account page](https://helenite.net/account?lang=en) to see your access status and available options.
 
 Your computer hosts the vault. The listed plan includes **10 GB of relay transfers per account per UTC calendar month**. An available direct connection can continue after that allowance is used. The relay allowance resets on the first of the month at 00:00 UTC. Read the [service terms](https://helenite.net/terms?lang=en).
 
@@ -45,7 +45,7 @@ Do not post connection QRs, connection codes, plugin data files, keys or vault c
 - Existing binary replacements and remote deletions require an explicit review decision. Choices apply to the versions shown; if either version changes, review again. Interrupted writes or unexpected edits remain held for recovery, while other eligible files can continue syncing.
 - Recovery copies stay outside the synchronized file list. The plugin's recovery view restores a separate file into **Helenite Recovered** for inspection. These local copies do not replace an independent backup and cannot recover a lost encryption key or notes missing from every device.
 - Mobile sync runs while Obsidian is active. Continuous background synchronization on iOS or Android is not guaranteed.
-- Helenite 0.1.7 requires **Obsidian 1.7.4** or later. Version 0.1.5 was tested on desktop Obsidian 1.7.4 for settings persistence and two-way sync with a local test client. Physical-device testing of the four-word comparison is pending.
+- Helenite 0.1.8 requires **Obsidian 1.7.4** or later. Version 0.1.5 was tested on desktop Obsidian 1.7.4 for settings persistence and two-way sync with a local test client. Physical-device testing of the four-word comparison is pending.
 - Start with a disposable test vault and retain your own backups. Automated test results do not replace Windows, macOS, Linux, Android and iPhone acceptance.
 
 ## Source and license
