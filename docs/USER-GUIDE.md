@@ -24,7 +24,7 @@ Under **Connection settings**, you can enable **Keep running when the window clo
 
 ## 2. Enable external access
 
-**Public route, once released:** sign in from Helenite using **Sign in with browser**, enter the emailed code in the browser, and approve the app connection. Check the account shown there. Choose **Register this PC** when the account panel offers it. Registration requires an eligible subscription; account login alone does not grant relay access.
+**Register a PC:** sign in from Helenite using **Sign in with browser**, enter the emailed code in the browser, and approve the app connection. Check the account shown there. Choose **Register this PC** when the account panel offers it. Registration requires an eligible subscription; account login alone does not grant relay access.
 
 **PC registration:** Sign in to see whether this account can register a PC. If the app says **PC registration is not available yet**, keep your account and vault and check again later.
 
@@ -117,19 +117,19 @@ These recovery steps need the PC's saved credentials. If a button is absent or t
 
 - **Lost or replaced PC:** when registration reports another PC, **Replace the previous PC** requires a recent email-code login and explicit confirmation. It transfers connection authority, not notes or encryption keys. You need a surviving vault copy and a paired device. Do not erase the surviving copies to start over.
 - **Lost phone or exposed connection code:** on the host PC using managed external access, run Helenite and Obsidian with the current plugin, with that vault connected to the running host. Open **Connected devices**, choose **Disconnect** for the device or **Cancel invitation** for an unused invitation, and confirm. **Refresh** the list and check for **Disconnected**. **Connection blocked · Relay cleanup pending** means the device is blocked but cleanup remains; use **Retry cleanup**. Disconnection blocks the next sync; already received notes remain. It does not remotely erase files. If the controls are absent or the result cannot be confirmed, preserve files/settings and contact support.
-- **Payment pending/needs review:** do not pay again to clear it. Preserve the displayed status and contact the person/channel that supplied your test access. Public customer support and live payment recovery are not yet available in this draft.
+- **Payment pending/needs review:** Keep the status shown in your account. If it persists, contact **admin@egress.llc** with the time and the message you saw. Repeating the payment could create another transaction.
 
-Downloading and installing Helenite is free; synchronization requires a subscription or an explicitly offered trial. The planned price is USD 3/month or USD 24/year. Existing local notes remain readable, copyable and exportable after expiry. Developer-only local testing is not a permanent free sync plan.
+Downloading and installing Helenite is free; synchronization requires a subscription or an explicitly offered trial. Plans are USD 3 per month or USD 24 per year. Existing local notes remain readable, copyable and exportable after expiry. Developer-only local testing is not a permanent free sync plan.
 
 **Ordinary cancellation.** Turn off renewal in **Manage subscription** on your account page. Your account shows when paid sync access ends. You can keep syncing until then and open your local notes afterwards.
 
 **Full refund.** You can keep syncing while a refund request is under review if your paid access is still active. Once a full refund for the current paid period is approved, sync access for that period ends. Helenite requests that Paddle stop the next renewal if it is still active. Your account shows whether Paddle has confirmed the change. To check the latest status, open **Manage subscription**. Your local notes remain available.
 
-Both plans include 10 GB of relayed data per account each UTC calendar month. That total includes uploads, downloads, each receiving device and any retransmission. Direct transfers use no relay bytes. The [service terms](https://helenite.net/terms?lang=en) explain how relay messages, events and connections are counted. Check your [Helenite account](https://helenite.net/account?lang=en) for subscription availability.
+Both plans include 10 GB of relayed data per account each UTC calendar month. That total includes uploads, downloads, each receiving device and any retransmission. Direct transfers use no relay bytes. The [service terms](https://helenite.net/terms?lang=en) explain how relay messages, events and connections are counted. Check your [Helenite account](https://helenite.net/account?lang=en) for current subscription availability.
 
 ## Save account data or delete an account
 
-**Prepared for public service; not currently active for general use.** When available, these controls appear in the website's ordinary signed-in account page, not the app-connection approval screen. They are hidden for Sandbox test accounts. If they are unavailable, send your request to **admin@egress.llc**; do not change account settings to bypass the restriction.
+Open your [Helenite account](https://helenite.net/account?lang=en) in a browser to see the available data and deletion controls. Sandbox accounts and the desktop connection approval screen do not show these controls. If a control is unavailable, contact **admin@egress.llc**.
 
 1. Keep a separate backup of your local vault. Under **Account data and deletion**, **Save my account data** downloads account information only. It does **not** back up notes or encryption keys.
 2. To stop future renewals, use **Manage subscription**. Account deletion does not cancel a subscription. If cancellation is scheduled, use the remaining paid period and request deletion after the subscription actually ends; pending payments or billing review must also be resolved.
@@ -146,7 +146,7 @@ In **Connection help → Helenite updates**, choose **Check for updates → Down
 
 On Ubuntu with Helenite 0.1.13 or later, leave Helenite open and approve Ubuntu’s request to install the update. When Helenite confirms the new version was installed, quit and reopen the app. If installation fails or you cancel, choose **Open installer** to retry or **Show installer in folder** to locate the verified download. The recovery message also shows the file’s full location. Earlier versions use Ubuntu’s default package installer. If its window closes before you can approve the first upgrade, open Files, press Ctrl+L and enter `~/.local/share/app.helenite.sync/verified-updates` (or `$XDG_DATA_HOME/app.helenite.sync/verified-updates` if you use a custom data folder). Open the newest download folder and choose **Open With** on the Helenite `.deb` to select your package installer. [Download the Ubuntu x64 0.1.14 installer](https://downloads.helenite.net/releases/0.1.14/linux-x64/Helenite-0.1.14-linux-x64.deb)
 
-On each device, check **Settings → Community plugins** for a Helenite update. For an invited build, follow the update instructions for your test and keep its existing connection settings. The desktop app and plugin have separate versions.
+If an older plugin bundled with the desktop app says sync is by invitation, open **Settings → Community plugins → Check for updates** in Obsidian on each device. Choose **Update** for Helenite. Your vault and connection settings stay in place. Check your [Helenite account](https://helenite.net/account?lang=en) for your sync access.
 
 For an issue, record what you did, the device/OS, the Helenite desktop version, the Obsidian and Helenite plugin versions on each device, the time, and the exact visible message. On the desktop use **Connection help → View diagnostics → Copy diagnostics** and inspect the preview before sharing it privately with your test organizer. The report does not identify the running plugin version, so include it separately. Nothing is automatically uploaded. The report excludes notes, vault names/paths, account emails, URLs/IPs and connection secrets. It cannot prove that a phone received a note. Never send passwords, email codes, connection links or plugin `data.json`.
 
@@ -154,7 +154,7 @@ For an issue, record what you did, the device/OS, the Helenite desktop version, 
 
 | Area | Current boundary |
 | --- | --- |
-| Plugin compatibility | Plugin **0.1.8** requires **Obsidian 1.7.4 or later**. On Obsidian 1.7.4, version 0.1.5 restored settings after restart and synced notes both ways with a local test client. The four-word comparison in 0.1.7 still awaits physical phone testing. |
+| Plugin compatibility | Four-word comparison is available in Helenite **0.1.7+**. Obsidian **1.7.4** was used to verify installation and restart of 0.1.7. In **Settings → Community plugins**, check the current Helenite release and its minimum Obsidian version. |
 | File size | Up to **64 MiB** per file once every approved device and the host support large files. Otherwise the **8 MiB** compatibility limit remains. Oversized files are retained locally and deferred, not silently uploaded. |
 | Text merging | Automatic merging and manual review text are bounded to **128 KiB**. Overlapping edits may require your choice. |
 | Storage | Each device needs room for its local notes, pending changes and recovery copies. Available device storage is not unlimited relay traffic. |
