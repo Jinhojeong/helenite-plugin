@@ -2,7 +2,7 @@
 
 [한국어](USER-GUIDE.ko.md)
 
-**Helenite user guide · 24 November 2026.** Download Helenite 0.1.14 for Ubuntu x64 or 0.1.12 for Apple silicon Macs. Windows x64 testers receive 0.1.12 from their organizer. Install the [Helenite plugin](https://community.obsidian.md/plugins/helenite) in Obsidian. Your [Helenite account](https://helenite.net/account?lang=en) shows your sync access and whether you can subscribe.
+**Helenite user guide · 27 November 2026.** Download the Apple silicon Mac or Ubuntu x64 installer from the [Helenite website](https://helenite.net/?lang=en). Contact Egress for the unsigned Windows x64 test installer. Install the [Helenite plugin](https://community.obsidian.md/plugins/helenite) in Obsidian. Check your access in your [Helenite account](https://helenite.net/account?lang=en).
 
 ## What you need
 
@@ -14,19 +14,20 @@ Your phone still uses Obsidian. It receives a local copy of the notes; it does n
 
 ## 1. Set up the host computer
 
-1. Download the [Mac 0.1.12 DMG for Apple silicon](https://downloads.helenite.net/releases/0.1.12/macos-arm64/Helenite-0.1.12-macos-arm64.dmg) or the [Ubuntu x64 0.1.14 DEB](https://downloads.helenite.net/releases/0.1.14/linux-x64/Helenite-0.1.14-linux-x64.deb). On Windows x64, use the 0.1.12 installer supplied by your test organizer.
-2. Install and open Helenite. Current candidates target **macOS Apple Silicon (ARM64)**, **Windows x64**, and an **Ubuntu 22.04 x64 DEB**. They do not establish support for Intel Macs, Windows ARM or every Linux distribution. Use the signing and verification result supplied with that exact installer: earlier Mac notarization or Linux package signatures do not certify a newly built file. Windows signing is still pending, so its current installer is a test build, not the final public release.
-3. Open your test vault in Obsidian. In Helenite choose **Find my vault**, select that same folder, then **Install Helenite**. This adds the plugin to that vault only; merely installing the desktop app does not add it to every vault.
-4. In Obsidian open **Settings → Community plugins** and enable **Helenite — By Egress**. Allow community plugins only after checking the supplied plugin. If it does not appear, refresh the installed list or reopen Obsidian; make sure you opened the selected vault.
-5. Once Helenite detects the running plugin, choose **Next → Start on this computer → Start with this computer**. Confirm that the server shows **Running**.
+1. Choose your operating system on the [Helenite download page](https://helenite.net/?lang=en). For the Windows x64 test installer, [contact Egress](mailto:admin@egress.llc?subject=Helenite%20Windows%20x64).
+2. On Windows, run `Get-FileHash -Algorithm SHA256` in PowerShell with the path to the downloaded installer. Before opening it, compare the output with the SHA-256 supplied by Egress for that version.
+3. Install and open the build for your system. The supported builds are for **Apple silicon Macs (ARM64)**, **Windows x64** and **Ubuntu 22.04 x64 (DEB)**.
+4. Open your test vault in Obsidian. In Helenite choose **Find my vault**, select that same folder, then **Install Helenite**. This adds the plugin to that vault only; merely installing the desktop app does not add it to every vault.
+5. In Obsidian open **Settings → Community plugins** and enable **Helenite — By Egress**. Allow community plugins only after checking the supplied plugin. If it does not appear, refresh the installed list or reopen Obsidian; make sure you opened the selected vault.
+6. Once Helenite detects the running plugin, choose **Next → Start on this computer → Start with this computer**. Confirm that the server shows **Running**.
 
-Under **Connection settings**, you can enable **Keep running when the window closes** and **Start at login**. These keep/start Helenite, not Obsidian. Continue to keep the host vault open in Obsidian when you want changes to transfer. Background operation does not keep a sleeping computer awake.
+Under **Connection settings**, you can enable **Keep running when the window closes** and **Start at login**. On desktop versions that offer this option, turn on **Start at login** and then **Also open this vault in Obsidian at login** to open the selected vault. This choice is off by default and applies only to that vault. Continue to keep the host vault open in Obsidian when you want changes to transfer. Background operation does not keep a sleeping computer awake.
 
 ## 2. Enable external access
 
-**Public route, once released:** sign in from Helenite using **Sign in with browser**, enter the emailed code in the browser, and approve the app connection. Check the account shown there. Choose **Register this PC** when the account panel offers it. Registration requires an eligible subscription; account login alone does not grant relay access.
+**Try sync without a card.** When a free trial is available on the account page, sign in with your email and choose the trial. Your seven days start when your first PC registers successfully. When the trial ends, external sync pauses and you can still open your local notes. To continue with a subscription, choose a plan on the same account.
 
-**PC registration:** Sign in to see whether this account can register a PC. If the app says **PC registration is not available yet**, keep your account and vault and check again later.
+**Register your PC.** In Helenite, select **Sign in with browser**. Use the email you enrolled or subscribed with, confirm the account, and approve the app connection. Then choose **Register this PC**. If the app says **PC registration is not available yet**, keep your account and vault and check again later.
 
 After a PC is registered, access renewal is automatic. Ordinary sign-in expiry does not require repeatedly entering email codes for that registered PC. If access expires or the service cannot confirm eligibility, external transfer pauses and local notes remain available. Follow the displayed account/connection action.
 
@@ -57,11 +58,13 @@ When a shared vault is first created with the latest plugin candidate, Helenite 
 
 The initial connection transfers the vault's supported files. Later passes send changes and reuse encrypted chunks where possible; the whole vault is not downloaded on every edit.
 
-1. Keep the host and phone vaults open. Wait for **Sync complete** and check for deferred items or conflict copies.
-2. Create a disposable note on the PC and wait for it on the phone.
-3. Add a different line on the phone and check it appears on the PC. Add further devices only after this works.
+With desktop 0.1.18 and plugin 0.1.13 on both devices, approve the QR request, then look for the newly paired phone under **My vault** on the PC. Keep the same vault open in Obsidian on both devices.
 
-**Connected** means a connection is ready; it does not prove that every file has arrived. Check the actual test note and **Last synced**. Large initial transfers can take longer. Hidden files and `.obsidian` settings, themes and plugins are excluded; device setup does not copy through note synchronization.
+1. **Connection approved** means the PC accepted this device’s pairing request.
+2. The **first note** is confirmed when the phone has saved a Markdown note from this PC. Attachments and other notes may still be transferring.
+3. The **whole vault** is confirmed when the PC checks that both devices have confirmed the same set of syncable files. The row shows when the PC checked. Edits made on an offline phone become visible after it reconnects. If a change is held or a newer change still needs confirmation, this row shows a pending state. An empty or attachment-only vault can finish while the first-note row still waits.
+
+Hidden files and `.obsidian` settings, themes and plugins are excluded. Update Helenite on the PC and both Obsidian plugins if an older version cannot report these confirmations. With the current public release you can also check both directions directly: keep both vaults open, create a disposable note on the PC, open it on the phone, add a line there and check that it returns to the PC.
 
 ## Everyday use, offline changes and sleep
 
@@ -83,7 +86,9 @@ Remote deletions and replacement of existing attachments also wait for review. C
 
 For a previous or incomplete file, open **Help · Recovery → Recovery copies → View copies**, then **Restore as a separate file**. Helenite writes a new file in **Helenite Recovered**, leaving the current file alone. The recovered file joins the next sync. Inspect it before moving its content back.
 
-The list shows up to 50 entries, with incomplete work first. A missing entry does not by itself mean the copy was deleted. Keep hidden Helenite state and plugin settings intact, and contact **admin@egress.llc** or your test organizer.
+In version 0.1.11 the list shows up to 50 entries, with incomplete work first. A missing entry does not by itself mean the copy was deleted. Keep hidden Helenite state and plugin settings intact, and contact **admin@egress.llc** or your test organizer.
+
+With plugin 0.1.13, choose **Recovery copies for this note** in a Markdown file’s menu or command palette. The list shows the saved copies for that path by date, with incomplete writes first. For a deleted note, open the full recovery list and search its original file path. Use **Next page** for older copies. Choose **Preview** to read a small Markdown copy, then **Restore as a separate file**. When reviewing simultaneous edits, choose each changed section and select **Merge selected sections → Confirm and apply**. Full versions and manual editing remain available.
 
 If a write was interrupted, first restore and inspect a separate copy. Use **Keep current file/state** only after checking the current content: it can accept a partial file or an absent file as the state to sync. Keep recovery copies until you are satisfied.
 
@@ -117,19 +122,21 @@ These recovery steps need the PC's saved credentials. If a button is absent or t
 
 - **Lost or replaced PC:** when registration reports another PC, **Replace the previous PC** requires a recent email-code login and explicit confirmation. It transfers connection authority, not notes or encryption keys. You need a surviving vault copy and a paired device. Do not erase the surviving copies to start over.
 - **Lost phone or exposed connection code:** on the host PC using managed external access, run Helenite and Obsidian with the current plugin, with that vault connected to the running host. Open **Connected devices**, choose **Disconnect** for the device or **Cancel invitation** for an unused invitation, and confirm. **Refresh** the list and check for **Disconnected**. **Connection blocked · Relay cleanup pending** means the device is blocked but cleanup remains; use **Retry cleanup**. Disconnection blocks the next sync; already received notes remain. It does not remotely erase files. If the controls are absent or the result cannot be confirmed, preserve files/settings and contact support.
-- **Payment pending/needs review:** do not pay again to clear it. Preserve the displayed status and contact the person/channel that supplied your test access. Public customer support and live payment recovery are not yet available in this draft.
+- **Payment pending/needs review:** Keep the status shown in your account. If it persists, contact **admin@egress.llc** with the time and the message you saw. Repeating the payment could create another transaction.
 
-Downloading and installing Helenite is free; synchronization requires a subscription or an explicitly offered trial. The planned price is USD 3/month or USD 24/year. Existing local notes remain readable, copyable and exportable after expiry. Developer-only local testing is not a permanent free sync plan.
+Downloading and installing Helenite is free; synchronization requires a subscription or an explicitly offered trial. Plans are USD 3 per month or USD 24 per year. Existing local notes remain readable, copyable and exportable after expiry. Developer-only local testing is not a permanent free sync plan.
+
+**Which emails will I receive?** When you request a six-digit sign-in code, **Helenite by Egress** sends it from `auth.helenite.net`. The card-free trial creates no charge or receipt. When you pay for a new subscription or a renewal, **Paddle** processes the payment and emails your receipt. Open **Manage subscription** in your [Helenite account](https://helenite.net/account?lang=en) to check your subscription, view past payments, and download PDF invoices.
 
 **Ordinary cancellation.** Turn off renewal in **Manage subscription** on your account page. Your account shows when paid sync access ends. You can keep syncing until then and open your local notes afterwards.
 
 **Full refund.** You can keep syncing while a refund request is under review if your paid access is still active. Once a full refund for the current paid period is approved, sync access for that period ends. Helenite requests that Paddle stop the next renewal if it is still active. Your account shows whether Paddle has confirmed the change. To check the latest status, open **Manage subscription**. Your local notes remain available.
 
-Both plans include 10 GB of relayed data per account each UTC calendar month. That total includes uploads, downloads, each receiving device and any retransmission. Direct transfers use no relay bytes. The [service terms](https://helenite.net/terms?lang=en) explain how relay messages, events and connections are counted. Check your [Helenite account](https://helenite.net/account?lang=en) for subscription availability.
+Both plans include 10 GB of relayed data per account each UTC calendar month. That total includes uploads, downloads, each receiving device and any retransmission. Direct transfers use no relay bytes. The [service terms](https://helenite.net/terms?lang=en) explain how relay messages, events and connections are counted. Check your [Helenite account](https://helenite.net/account?lang=en) for current subscription availability.
 
 ## Save account data or delete an account
 
-**Prepared for public service; not currently active for general use.** When available, these controls appear in the website's ordinary signed-in account page, not the app-connection approval screen. They are hidden for Sandbox test accounts. If they are unavailable, send your request to **admin@egress.llc**; do not change account settings to bypass the restriction.
+Open your [Helenite account](https://helenite.net/account?lang=en) in a browser to see the available data and deletion controls. Sandbox accounts and the desktop connection approval screen do not show these controls. If a control is unavailable, contact **admin@egress.llc**.
 
 1. Keep a separate backup of your local vault. Under **Account data and deletion**, **Save my account data** downloads account information only. It does **not** back up notes or encryption keys.
 2. To stop future renewals, use **Manage subscription**. Account deletion does not cancel a subscription. If cancellation is scheduled, use the remaining paid period and request deletion after the subscription actually ends; pending payments or billing review must also be resolved.
@@ -144,9 +151,9 @@ For help with Helenite or a privacy request, email **admin@egress.llc**.
 
 In **Connection help → Helenite updates**, choose **Check for updates → Download update → Open installer**. Finish syncing first. The **You are using the latest version** message confirms that the check succeeded.
 
-On Ubuntu with Helenite 0.1.13 or later, leave Helenite open and approve Ubuntu’s request to install the update. When Helenite confirms the new version was installed, quit and reopen the app. If installation fails or you cancel, choose **Open installer** to retry or **Show installer in folder** to locate the verified download. The recovery message also shows the file’s full location. Earlier versions use Ubuntu’s default package installer. If its window closes before you can approve the first upgrade, open Files, press Ctrl+L and enter `~/.local/share/app.helenite.sync/verified-updates` (or `$XDG_DATA_HOME/app.helenite.sync/verified-updates` if you use a custom data folder). Open the newest download folder and choose **Open With** on the Helenite `.deb` to select your package installer. [Download the Ubuntu x64 0.1.14 installer](https://downloads.helenite.net/releases/0.1.14/linux-x64/Helenite-0.1.14-linux-x64.deb)
+On Ubuntu with Helenite 0.1.13 or later, leave Helenite open and approve Ubuntu’s request to install the update. When Helenite confirms the new version was installed, quit and reopen the app. If installation fails or you cancel, choose **Open installer** to retry or **Show installer in folder** to locate the verified download. The recovery message also shows the file’s full location. Earlier versions use Ubuntu’s default package installer. If its window closes before you can approve the first upgrade, open Files, press Ctrl+L and enter `~/.local/share/app.helenite.sync/verified-updates` (or `$XDG_DATA_HOME/app.helenite.sync/verified-updates` if you use a custom data folder). Open the newest download folder and choose **Open With** on the Helenite `.deb` to select your package installer. [Download the Ubuntu x64 0.1.16 installer](https://downloads.helenite.net/releases/0.1.16/linux-x64/Helenite-0.1.16-linux-x64.deb)
 
-On each device, check **Settings → Community plugins** for a Helenite update. For an invited build, follow the update instructions for your test and keep its existing connection settings. The desktop app and plugin have separate versions.
+If an older plugin bundled with the desktop app says sync is by invitation, open **Settings → Community plugins → Check for updates** in Obsidian on each device. Choose **Update** for Helenite. Your vault and connection settings stay in place. Check your [Helenite account](https://helenite.net/account?lang=en) for your sync access.
 
 For an issue, record what you did, the device/OS, the Helenite desktop version, the Obsidian and Helenite plugin versions on each device, the time, and the exact visible message. On the desktop use **Connection help → View diagnostics → Copy diagnostics** and inspect the preview before sharing it privately with your test organizer. The report does not identify the running plugin version, so include it separately. Nothing is automatically uploaded. The report excludes notes, vault names/paths, account emails, URLs/IPs and connection secrets. It cannot prove that a phone received a note. Never send passwords, email codes, connection links or plugin `data.json`.
 
@@ -154,11 +161,11 @@ For an issue, record what you did, the device/OS, the Helenite desktop version, 
 
 | Area | Current boundary |
 | --- | --- |
-| Plugin compatibility | Plugin **0.1.8** requires **Obsidian 1.7.4 or later**. On Obsidian 1.7.4, version 0.1.5 restored settings after restart and synced notes both ways with a local test client. The four-word comparison in 0.1.7 still awaits physical phone testing. |
+| Plugin compatibility | Four-word comparison is available in Helenite **0.1.7+**. Obsidian **1.7.4** was used to verify installation and restart of 0.1.7. In **Settings → Community plugins**, check the current Helenite release and its minimum Obsidian version. |
 | File size | Up to **64 MiB** per file once every approved device and the host support large files. Otherwise the **8 MiB** compatibility limit remains. Oversized files are retained locally and deferred, not silently uploaded. |
 | Text merging | Automatic merging and manual review text are bounded to **128 KiB**. Overlapping edits may require your choice. |
 | Storage | Each device needs room for its local notes, pending changes and recovery copies. Available device storage is not unlimited relay traffic. |
 | Relay service | 10 GB per account and UTC calendar month. If a monthly limit is reached, use an available direct connection or wait until 00:00 UTC on the first of next month. No automatic overage charge. |
 | Availability | Host awake/online with Helenite and Obsidian running; phone Obsidian in foreground. No USB requirement. |
-| Desktop builds | Ubuntu x64 **0.1.14** was tested in a virtual machine. Egress signed the Mac **0.1.12** installer and Apple notarized it. The Windows **0.1.12** test installer is unsigned. |
+| Desktop builds | Get the signed Mac and Ubuntu installers from the [Helenite website](https://helenite.net/?lang=en). Contact Egress for the unsigned Windows x64 test installer and its SHA-256. |
 
